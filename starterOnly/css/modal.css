@@ -129,6 +129,10 @@ main {
     background: #3876ac;
 }
 
+.modal-btn-success {
+    margin: auto;
+}
+
 .footer {
     margin: 20px;
     padding: 10px;
@@ -186,6 +190,10 @@ main {
     margin: 15px auto;
 }
 
+.modal-body-success {
+    text-align: center;
+}
+
 label {
     font-family: var(--font-default);
     font-size: 17px;
@@ -223,6 +231,16 @@ input {
 }
 .formData[data-error-visible="true"] .text-control {
     border: 2px solid #e54858;
+}
+.locations.formData[data-error-visible="true"], .agreements.formData[data-error-visible="true"] {
+    border: 2px solid #e54858;
+}
+.error-message {
+    font-family: var(--font-default);
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 11px;
+    color: #e54858;
 }
 /* 
 input[data-error]::after {

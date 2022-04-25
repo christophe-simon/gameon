@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>Reservation</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="stylesheet" href="modal.css" />
+        <link rel="stylesheet" href="./css/modal.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link
         href="https://fonts.googleapis.com/css?family=DM+Sans"
@@ -60,7 +60,6 @@
                             name="reserve"
                             action="index.html"
                             method="post"
-                            onsubmit="validate();"
                         >
                             <div class="formData">
                                 <label for="first">Prénom</label><br>
@@ -69,8 +68,6 @@
                                     type="text"
                                     id="first"
                                     name="first"
-                                    minlength="2"
-                                    required
                                 />
                             </div>
                             <div class="formData">
@@ -80,15 +77,13 @@
                                     type="text"
                                     id="last"
                                     name="last"
-                                    minlength="2"
-                                    required
                                 />
                             </div>
                             <div class="formData">
                                 <label for="email">E-mail</label><br>
                                 <input
                                     class="text-control"
-                                    type="email"
+                                    type="text"
                                     id="email"
                                     name="email"
                                 />
@@ -109,20 +104,16 @@
                                     type="number"
                                     id="quantity"
                                     name="quantity"
-                                    min="0"
-                                    max="99"
-                                    required
                                 />
                             </div>
                             <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
-                            <div class="formData">
+                            <div class="formData locations">
                                 <input
                                     class="checkbox-input"
                                     type="radio"
                                     id="location1"
                                     name="location"
                                     value="New York"
-                                    checked
                                 />
                                 <label class="checkbox-label" for="location1">
                                     <span class="checkbox-icon"></span>
@@ -184,13 +175,12 @@
                                 Portland</label
                                 >
                             </div>
-                            <div class="formData">
+                            <div class="formData agreements">
                                 <input
                                     class="checkbox-input"
                                     type="checkbox"
                                     id="checkbox1"
                                     checked
-                                    required
                                 />
                                 <label class="checkbox2-label" for="checkbox1">
                                     <span class="checkbox-icon"></span>
@@ -200,11 +190,12 @@
                                 <label class="checkbox2-label" for="checkbox2">
                                     <span class="checkbox-icon"></span>
                                     Je souhaite être prévenu des prochains évènements.
-                                </label><br>
+                                </label>
                             </div>
                             <input
                                 class="btn-submit"
                                 type="submit"
+                                id="submit"
                                 class="button"
                                 value="C'est parti"
                             />
@@ -219,6 +210,8 @@
                 Copyright 2014 - 2022, GameOn Inc.
             </p>
         </footer>
-        <script src="modal.js"></script>
+        <script src="./js/menu.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/formValidation.js"></script>
     </body>
 </html>
