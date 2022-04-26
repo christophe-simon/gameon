@@ -29,7 +29,7 @@
         </div>
 
         <main>
-            <div class="hero-section">
+            <div id="hero-section" class="hero-section">
                 <div class="hero-content">
                     <h1 class="hero-headline">
                         Marathon national<br>
@@ -51,9 +51,9 @@
                 </button>
             </div>
 
-            <div class="bground">
+            <div id="form-modal" class="bground">
                 <div class="content">
-                    <span class="close"></span>
+                    <span id="form-modal-close-btn" class="close"></span>
                     
                     <div class="modal-body">
                         <form
@@ -61,7 +61,7 @@
                             action="index.html"
                             method="post"
                         >
-                            <div class="formData">
+                            <div id="first-name-data" class="formData">
                                 <label for="first">Prénom</label><br>
                                 <input
                                     class="text-control"
@@ -69,8 +69,9 @@
                                     id="first"
                                     name="first"
                                 />
+                                <p class="error-message">Vous devez indiquer un nom contenant un minimum de 2 caractères</p>
                             </div>
-                            <div class="formData">
+                            <div  id="last-name-data" class="formData">
                                 <label for="last">Nom</label><br>
                                 <input
                                     class="text-control"
@@ -78,8 +79,9 @@
                                     id="last"
                                     name="last"
                                 />
+                                <p class="error-message">Vous devez indiquer un nom contenant un minimum de 2 caractères</p>
                             </div>
-                            <div class="formData">
+                            <div  id="email-data" class="formData">
                                 <label for="email">E-mail</label><br>
                                 <input
                                     class="text-control"
@@ -87,8 +89,9 @@
                                     id="email"
                                     name="email"
                                 />
+                                <p class="error-message">Vous devez indiquer une adresse email valide</p>
                             </div>
-                            <div class="formData">
+                            <div  id="birthdate-data" class="formData">
                                 <label for="birthdate">Date de naissance</label><br>
                                 <input
                                     class="text-control"
@@ -96,8 +99,9 @@
                                     id="birthdate"
                                     name="birthdate"
                                 />
+                                <p class="error-message">Vous devez indiquer une date correcte</p>
                             </div>
-                            <div class="formData">
+                            <div  id="quantity-data" class="formData">
                                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                                 <input
                                     class="text-control"
@@ -105,9 +109,10 @@
                                     id="quantity"
                                     name="quantity"
                                 />
+                                <p class="error-message">Vous devez indiquer un nombre compris entre 0 et 99</p>
                             </div>
                             <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
-                            <div class="formData locations">
+                            <div id="location-data" class="formData">
                                 <input
                                     class="checkbox-input"
                                     type="radio"
@@ -174,8 +179,9 @@
                                 <span class="checkbox-icon"></span>
                                 Portland</label
                                 >
+                                <p class="error-message">Vous devez sélectioner une ville</p>
                             </div>
-                            <div class="formData agreements">
+                            <div id="checkboxes-data" class="formData">
                                 <input
                                     class="checkbox-input"
                                     type="checkbox"
@@ -186,11 +192,13 @@
                                     <span class="checkbox-icon"></span>
                                     J'ai lu et accepté les conditions d'utilisation.
                                 </label><br>
+                                <p class="error-message">Vous devez accepter les conditions d'utilisation</p>
                                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                                 <label class="checkbox2-label" for="checkbox2">
                                     <span class="checkbox-icon"></span>
                                     Je souhaite être prévenu des prochains évènements.
                                 </label>
+                                
                             </div>
                             <input
                                 class="btn-submit"
@@ -200,6 +208,16 @@
                                 value="C'est parti"
                             />
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div id="validation-modal" class="bground">
+                <div class="content">
+                    <span id="validation-modal-close-btn-1" class="close"></span>
+                    
+                    <div class="modal-body">
+                        <p>Merci pour votre inscription</p>
+                        <button id="validation-modal-close-btn-2" class="btn-close">Fermer</button>
                     </div>
                 </div>
             </div>

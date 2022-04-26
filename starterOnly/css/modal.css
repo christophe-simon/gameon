@@ -130,7 +130,7 @@ main {
 }
 
 .modal-btn-success {
-    margin: auto;
+    margin: auto !important;
 }
 
 .footer {
@@ -168,7 +168,7 @@ main {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgba(26, 39, 156, 0.4);
+    background-color: rgba(256, 256, 256, 1);
 }
 
 .content {
@@ -190,8 +190,13 @@ main {
     margin: 15px auto;
 }
 
-.modal-body-success {
+#validation-modal .modal-body {
     text-align: center;
+}
+
+#validation-modal .modal-body p {
+    margin-top: 50px;
+    margin-bottom: 200px;
 }
 
 label {
@@ -232,15 +237,17 @@ input {
 .formData[data-error-visible="true"] .text-control {
     border: 2px solid #e54858;
 }
-.locations.formData[data-error-visible="true"], .agreements.formData[data-error-visible="true"] {
-    border: 2px solid #e54858;
+.formData[data-error-visible="true"] .checkbox-label,
+.formData[data-error-visible="true"] .checkbox2-label[for="checkbox1"],
+.formData[data-error-visible="true"] .error-message
+{
+    color: #e54858;
 }
-.error-message {
+.formData .error-message {
     font-family: var(--font-default);
-    font-size: 17px;
+    font-size: 12px;
     font-weight: normal;
     margin-bottom: 11px;
-    color: #e54858;
 }
 /* 
 input[data-error]::after {
@@ -342,6 +349,18 @@ input[data-error]::after {
     background: #fe142f;
     display: block;
     margin: 0 auto;
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: 12px 82px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+.btn-close {
+    background: #fe142f;
+    display: block;
+    margin: 0 auto 50px auto;
     border-radius: 7px;
     font-size: 1rem;
     padding: 12px 82px;
