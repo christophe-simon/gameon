@@ -13,7 +13,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://christophe-simon.github.io/gameon/starterOnly/)
 
 GameOn is a fictive company specialized in gaming conferences and competitions.
 
@@ -91,4 +91,4 @@ Project Link: [https://github.com/christophe-simon/gameon](https://github.com/ch
 [license-shield]: https://img.shields.io/github/license/christophe-simon/gameon.svg?style=flat-square
 [license-url]: https://github.com/christophe-simon/gameon/blob/master/LICENSE.txt
 
-[product-screenshot]: docs/cover.jpg
+[product-screenshot]: docs/screenshot.png

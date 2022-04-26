@@ -206,6 +206,9 @@ label {
     display: inline-block;
     margin-bottom: 11px;
 }
+label[for="quantity"] {
+    margin-top: 7px;
+}
 input {
     padding: 8px;
     border: 0.8px solid #ccc;
