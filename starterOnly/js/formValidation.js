@@ -1,40 +1,24 @@
-// Regex variables
-const NAME_REGEX = /^[a-zA-Z]{2,}$/;
-const nameRegex = new RegExp(NAME_REGEX);
-
-const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const emailRegex = new RegExp(EMAIL_REGEX);
-
-const DATE_REGEX = /^[0-9][0-9][0-9][0-9]\-(0[1-9]|1[0-2])\-(0[1-9]|1\d|2\d|3[01])$/;
-const dateRegex = new RegExp(DATE_REGEX);
-
-const COMPETITIONS_NUMBER_REGEX = /^[0-9]{1,2}$/;
-const competitionsNumberRegex = new RegExp(COMPETITIONS_NUMBER_REGEX);
-
-const LOCATION_REGEX = /^New York|San Francisco|Seattle|Chicago|Boston|Portland$/;
-const locationRegex = new RegExp(LOCATION_REGEX);
-
 /**
  * Checks if a data is valid
  * @param {string} elt 
  * @returns {boolean}
  */
-let isDataValid = function(elt) {
+const isDataValid = function(elt) {
     switch (elt) {
-        case 'firstNameElt':
+        case FIRST_NAME_ELT:
             return nameRegex.test(firstNameElt.value);
-        case 'lastNameElt':
+        case LAST_NAME_ELT:
             return nameRegex.test(lastNameElt.value);
-        case 'emailElt':
+        case EMAIL_ELT:
             return emailRegex.test(emailElt.value);
-        case 'birthdateElt':
+        case BIRTHDATE_ELT:
             return dateRegex.test(birthdateElt.value);
-        case 'quantityElt':
+        case QUANTITY_ELT:
             return competitionsNumberRegex.test(quantityElt.value);
-        case 'locationElt':
+        case LOCATION_ELT:
             const chosenLocationElt = document.querySelector('input[type="radio"]:checked');
             return (chosenLocationElt !== null && locationRegex.test(chosenLocationElt.value));
-        case 'agreementElt':
+        case AGREEMENT_ELT:
             return agreementElt.checked;
         default:
             throw 'Pas de donnée de ce type';
@@ -45,8 +29,8 @@ let isDataValid = function(elt) {
  * Display correctly (in casual mode or in error mode) an element whether its value is valid or not
  * @param {string} elt 
  */
-let manageElementDisplay = function(elt) {
-    let elements = {
+const manageElementDisplay = function(elt) {
+    const elements = {
         firstNameElt,
         lastNameElt,
         emailElt,
@@ -56,7 +40,7 @@ let manageElementDisplay = function(elt) {
         agreementElt
     };
 
-    let errorMessagesElts = {
+    const errorMessagesElts = {
         firstNameElt: firstNameErrorMessageElt,
         lastNameElt: lastNameErrorMessageElt,
         emailElt: emailErrorMessageElt,
@@ -79,34 +63,36 @@ let manageElementDisplay = function(elt) {
  * Checks if the form is valid
  * @returns {boolean}
  */
-let isFormValid = function() {
+const isFormValid = function() {
     return (
-        isDataValid('firstNameElt') &&
-        isDataValid('lastNameElt') &&
-        isDataValid('emailElt') &&
-        isDataValid('birthdateElt') &&
-        isDataValid('quantityElt') &&
-        isDataValid('locationElt') &&
-        isDataValid('agreementElt')
+        isDataValid(FIRST_NAME_ELT) &&
+        isDataValid(LAST_NAME_ELT) &&
+        isDataValid(EMAIL_ELT) &&
+        isDataValid(BIRTHDATE_ELT) &&
+        isDataValid(QUANTITY_ELT) &&
+        isDataValid(LOCATION_ELT) &&
+        isDataValid(AGREEMENT_ELT)
     );
 }
 
 /**
  * Checks if the form is valid and display the validation modal in this case, or display the errors if there are any
  */
-formElt.addEventListener('submit', function(e) {
-    e.preventDefault();
+const manageValidation = function(evt) {
+    evt.preventDefault();
 
     if (isFormValid()) {
         closeFormModal();
         displayValidationModal();
     } else {
-        manageElementDisplay('firstNameElt');
-        manageElementDisplay('lastNameElt');
-        manageElementDisplay('emailElt');
-        manageElementDisplay('birthdateElt');
-        manageElementDisplay('quantityElt');
-        manageElementDisplay('locationElt');
-        manageElementDisplay('agreementElt');
+        manageElementDisplay(FIRST_NAME_ELT);
+        manageElementDisplay(LAST_NAME_ELT);
+        manageElementDisplay(EMAIL_ELT);
+        manageElementDisplay(BIRTHDATE_ELT);
+        manageElementDisplay(QUANTITY_ELT);
+        manageElementDisplay(LOCATION_ELT);
+        manageElementDisplay(AGREEMENT_ELT);
     }
-});
+}
+
+

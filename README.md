@@ -23,6 +23,12 @@ The work was first started by a fictive colleague from [these mockups](https://w
 
 I ccompleted this fictive colleague's work by correcting some bugs on the registration form and finishing the required JavaScript developpement.
 
+The requirements were:
+
+- use separate files for HTML, CSS and JavaScript;
+- always comment your code (describe each function and class, as well as the parts of the code that need more details);
+- manually test functionality, form inputs and responsive display.
+
 ### Built With
 
 - Markdown, Html, Css, JavaScript
