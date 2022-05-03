@@ -23,7 +23,7 @@ const locationErrorMessageElt = document.querySelector('#location-data p.error-m
 const agreementErrorMessageElt = document.querySelector('#checkboxes-data p.error-message');
 
 // Regex variables
-const NAME_REGEX = /^[a-zA-Z]{2,}$/;
+const NAME_REGEX = /^[a-zA-ZáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙäëïöüÿÄËÏÖÜŸçÇæœÆŒåÅßøØãñõÃÑÕ']{2,}$/;
 const nameRegex = new RegExp(NAME_REGEX);
 
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -3,7 +3,7 @@
  * @param {string} elt 
  * @returns {boolean}
  */
-const isDataValid = function(elt) {
+const isDataValid = function (elt) {
     switch (elt) {
         case FIRST_NAME_ELT:
             return nameRegex.test(firstNameElt.value);
@@ -29,7 +29,7 @@ const isDataValid = function(elt) {
  * Display correctly (in casual mode or in error mode) an element whether its value is valid or not
  * @param {string} elt 
  */
-const manageElementDisplay = function(elt) {
+const manageElementDisplay = function (elt) {
     const elements = {
         firstNameElt,
         lastNameElt,
@@ -63,7 +63,7 @@ const manageElementDisplay = function(elt) {
  * Checks if the form is valid
  * @returns {boolean}
  */
-const isFormValid = function() {
+const isFormValid = function () {
     return (
         isDataValid(FIRST_NAME_ELT) &&
         isDataValid(LAST_NAME_ELT) &&
@@ -78,7 +78,8 @@ const isFormValid = function() {
 /**
  * Checks if the form is valid and display the validation modal in this case, or display the errors if there are any
  */
-const manageValidation = function(evt) {
+const manageValidation = function (evt) {
+    console.log(evt);
     evt.preventDefault();
 
     if (isFormValid()) {
