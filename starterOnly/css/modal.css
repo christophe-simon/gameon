@@ -151,7 +151,7 @@ main {
 
 /* Modal form */
 
-.button {
+/*.button {
     background: #fe142f;
     margin-top: 0.5em;
     padding: 1em;
@@ -163,7 +163,7 @@ main {
 
 .button:hover {
     background: #3876ac;
-}
+}*/
 
 .smFont {
     font-size: 16px;
@@ -372,6 +372,10 @@ input[data-error]::after {
 
 .btn-submit {
     margin-bottom: 30px;
+}
+
+.btn-submit:hover {
+    background: #3876ac;
 }
 
 .btn-close {
