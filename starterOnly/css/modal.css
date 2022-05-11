@@ -46,7 +46,7 @@ nav ul li {
     padding-right: 2vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .topnav a {
@@ -55,7 +55,7 @@ nav ul li {
     color: #000000;
     text-align: center;
     padding: 12px 12px;
-    margin: 5px;
+    /*margin: 5px;*/
     text-decoration: none;
     font-size: 20px;
     font-family: Roboto, sans-serif;
@@ -80,12 +80,16 @@ nav ul li {
 }
 
 @media screen and (max-width: 768px) {
-    .topnav {z-index: 2;}
+    .topnav > .main-navbar > ul {
+        display: none;
+    }
     .topnav a {display: none;}
     .topnav a.icon {
         display: block;
     }
-    .topnav.responsive {position: relative;}
+    .topnav.responsive > .main-navbar > ul {
+        display: block;
+    }
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
@@ -98,7 +102,12 @@ nav ul li {
     }
     .bground {
         position: static;
-        margin-top: 79px;
+        margin-top: 100px;
+    }
+    .main-navbar {
+        z-index: 2;
+        background-color: #fff;
+        border-radius: 15px;
     }
 }
 
@@ -110,6 +119,10 @@ nav ul li {
         display: block;
     }
 } 
+
+.header-logo {
+    z-index: 0;
+}
 
 main {
     font-size: 130%;
@@ -371,7 +384,7 @@ input[data-error]::after {
 }
 
 .btn-submit {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .btn-submit:hover {
