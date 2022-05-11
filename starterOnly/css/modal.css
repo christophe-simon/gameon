@@ -55,7 +55,6 @@ nav ul li {
     color: #000000;
     text-align: center;
     padding: 12px 12px;
-    /*margin: 5px;*/
     text-decoration: none;
     font-size: 20px;
     font-family: Roboto, sans-serif;
@@ -556,6 +555,7 @@ footer {
         background: #fff;
         color: #000;
         padding: 0;
+        min-width: unset;
     }
     .hero-content::after {
         content: unset;
@@ -584,6 +584,21 @@ footer {
     .copyrights {
         margin-top: 50px;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-logo img {
+        width: 120px;
+    }
+    .topnav .icon {
+        font-size: 1rem;
+    }
+    .hero-headline {
+        font-size: 2rem;
+    }
+    .hero-text {
+        font-size: 1rem;
     }
 }
 
