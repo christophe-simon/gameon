@@ -21,7 +21,7 @@ This project is their website, proposing an online form in order to subscribe to
 
 The work was first started by a fictive colleague from [these mockups](https://www.figma.com/file/B7NKBDvSI18uoMLJgpnh48/UI-Design-GameOn-FR?node-id=106%3A630). This fictive colleague started working on the HTML structure and the CSS style, based on these mockups. He finished the layout and the content of the homepage and the form modal. He also started the JavaScript developpement. His repo is available [here](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/).
 
-I ccompleted this fictive colleague's work by correcting some bugs on the registration form and finishing the required JavaScript developpement.
+I completed this fictive colleague's work by correcting some bugs on the registration form and finishing the required JavaScript developpement.
 
 The requirements were:
 
