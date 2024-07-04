@@ -15,7 +15,7 @@
 
 ## About The Project
 
-[![GameOn screenshot][product-screenshot]](https://csimon-web.github.io/gameon/starterOnly/)
+[![GameOn screenshot][product-screenshot]](#)
 
 GameOn is a fictive company specialized in gaming conferences and competitions.
 
@@ -30,6 +30,8 @@ The requirements were:
 - use separate files for HTML, CSS and JavaScript;
 - always comment your code (describe each function and class, as well as the parts of the code that need more details);
 - manually test functionality, form inputs and responsive display.
+
+You can have a look on this website here: https://csimon-web.github.io/gameon/starterOnly/
 
 ### Built With
 
